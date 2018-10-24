@@ -10,6 +10,7 @@ from django.db.models.signals import post_save
 
 from .utils import code_generator
 
+#this is model manager 
 class MyUserManager(BaseUserManager):
 
 
