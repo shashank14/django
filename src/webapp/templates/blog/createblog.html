@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block head %}
+{{block.super}} | Settings Form
+ {% endblock %}
+
+{% block content %}
+<form class="" action="" method="post">{% csrf_token %}
+<div class="form-group">
+    {{form.as_p}}
+</div>
+  <input type="submit"  class="btn btn-primary btn-lg" name="" value="Submit">
+</form>
+<div class="">
+  {% include 'base/snippets/msg.html' with brand_name='CannonBalls' %}
+</div>
+{% endblock %}

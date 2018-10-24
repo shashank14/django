@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block head %}
+{{block.super}} | products
+ {% endblock %}
+
+{% block content %}
+<h1>Products</h1>
+{% include 'products/snippets/carddetail.html' with instance=product %}
+{% endblock %}

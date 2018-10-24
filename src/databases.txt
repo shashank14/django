@@ -1,0 +1,4 @@
+mysql -u root -p
+show databases;
+drop database <dbname>
+create database <dbname>

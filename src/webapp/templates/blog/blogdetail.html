@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block head %}
+{{block.super}} | Settings Form
+ {% endblock %}
+
+{% block content %}
+<ul>
+  <li> {{object.title}}</li>
+  <li> {{object.content}}</li>
+</ul>
+{% endblock %}

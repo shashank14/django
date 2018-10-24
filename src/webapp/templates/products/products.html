@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block head %}
+{{block.super}} | products
+ {% endblock %}
+
+{% block content %}
+<h1>Products</h1>
+{% for product in object_list %}
+{% include 'products/snippets/card.html' with instance=product %}
+{% endfor %}
+{% endblock %}
+
+
+
+<!-- <ul>
+  {% if object_list%}
+  {% for product in object_list %}
+  <li>{{product.title}}</li>
+  <li>{{product.price}}</li>
+    <li>  <img src="{{product.image.url}}" alt="" width="100px" height="200px"> </li>
+    <!-- <li>  <img src="{{product.image_two.url}}" alt="" width="100px" height="200px"> </li> -->
+  <!-- {% endfor %}
+  {% endif %} -->
+<!-- </ul> -->

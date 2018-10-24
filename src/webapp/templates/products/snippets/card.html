@@ -1,0 +1,19 @@
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="{{instance.image.url}}" alt='{{instance.title|default_if_none:"no image"}}'>
+      <div class="caption">
+        <h3>{{instance.title}}</h3>
+        <p>{{instance.description|truncatewords:5}}</p>
+        <p>{{instance.id}}</p>
+        <!-- <p>{{product.get_absolute_url}}</p> -->
+        <p><a href="{{instance.get_absolute_url}}" class="btn btn-primary" role="button">View</a>
+          <a href="{% url 'products:detail' id=instance.id %}" class="btn btn-warning" role="button">Reverse</a>
+          <a href="{% url 'products:home' %}" class="btn btn-warning" role="button">MM</a>
+          <a href="{{instance.get_url}}" class="btn btn-warning" role="button">MM1</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
